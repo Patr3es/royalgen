@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage | NXT</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/hero.css">
+        <link rel="stylesheet" href="/css/brands.css">
+        <link rel="stylesheet" href="/css/status.css">
+        <link rel="stylesheet" href="/css/animations.css">
+        <link rel="icon" href="/assets/NXT logo.png" type="image/png">
+        <meta property="og:title" content="Start Your Reselling Journey with NXT!" />
+        <meta property="og:description" content="Join the NXT community and turn amazing deals into real profits. Discover exclusive products, connect with like-minded resellers, and take your side hustle to the next level!" />
+        <meta property="og:image" content="https://nxtgen.shop/assets/banner.png" />
+        <meta property="og:url" content="https://nxtgen.shop" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Next Generation Transactions"/>
+        <meta name="twitter:card" content="summary_large_image" />
+
+    </head>    
+<body>
+    <header>
+        <div class="logo">
+            <a href="/" class="logo-link disabled">
+                <img src="/assets/NXT logo.png" alt="NXT Logo">
+                <h1>NXT</h1>
+            </a>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/status">Status</a></li>
+                <li><a href="https://discord.gg/nxtgen" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Experience reselling<br>like never before</h1>
+            <p>Improve your sales experience with our 1:1 that are always up-to-date,<br>
+            specifically created to your own needs with your custom information.</p>
+        </section>
+    
+        <section class="brands">
+            <div class="images-wrapper">
+                <div class="scrolling-conent"></div>
+                <img src="/assets/Nike logo.png" alt="Nike">
+                <img src="/assets/StockX logo.png" alt="Stock X">
+                <img src="/assets/Bape logo.png" alt="Bape">
+                <img src="/assets/CanGoose logo.png" alt="Canada Goose">
+                <img src="/assets/Corteiz logo.png" alt="Corteiz">
+                <img src="/assets/Dyson logo.png" alt="Dyson">
+                <img src="/assets/Goat logo.png" alt="Goat">
+                <img src="/assets/Nike logo.png" alt="Nike">
+                <img src="/assets/LV logo.png" alt="LV">
+                <img src="/assets/Moncler logo.png" alt="Moncler">
+                <img src="/assets/Polo logo.png" alt="Polo">
+                <img src="/assets/Prada logo.png" alt="Prada">
+                <img src="/assets/Zara logo.png" alt="Zara">
+                <img src="/assets/Stussy logo.png" alt="Stussy">
+                <img src="/assets/Nocta logo.png" alt="Nocta">
+            </div>
+            <div class="images-wrapper">
+                <div class="scrolling-conent"></div>
+                <img src="/assets/Dyson logo.png" alt="Dyson">
+                <img src="/assets/Goat logo.png" alt="Goat">
+                <img src="/assets/LV logo.png" alt="LV">
+                <img src="/assets/Moncler logo.png" alt="Moncler">
+                <img src="/assets/Polo logo.png" alt="Polo">
+                <img src="/assets/Prada logo.png" alt="Prada">
+                <img src="/assets/Stussy logo.png" alt="Stussy">
+                <img src="/assets/Nike logo.png" alt="Nike">
+                <img src="/assets/Nocta logo.png" alt="Nocta">
+                <img src="/assets/Nike logo.png" alt="Nike">
+                <img src="/assets/StockX logo.png" alt="Stock X">
+                <img src="/assets/Zara logo.png" alt="Zara">
+                <img src="/assets/Bape logo.png" alt="Bape">
+                <img src="/assets/CanGoose logo.png" alt="Canada Goose">
+                <img src="/assets/Corteiz logo.png" alt="Corteiz">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const brandsWrapper = document.querySelector(".brands .images-wrapper");
+        const brandImages = document.querySelectorAll(".brands img");
+
+        // Adjust the fade-in and fade-out line positions 
+        const fadeStart = 300; // 300px from the left
+        const fadeEnd = window.innerWidth - 300; // 300px from the right
+
+        // Function to handle the fade-out and fade-in logic
+        function handleFadeEffect() {
+            brandImages.forEach((img) => {
+                const imgPosition = img.getBoundingClientRect().left;
+
+                if (imgPosition < fadeStart || imgPosition > fadeEnd) {
+                    img.classList.add("fade-out"); // Add fade-out effect
+                } else {
+                    img.classList.remove("fade-out"); // Remove fade-out effect
+                }
+            });
+        }
+
+        // Ensure correct opacity on page load
+        function initializeFadeEffect() {
+            brandImages.forEach((img) => {
+                const imgPosition = img.getBoundingClientRect().left;
+
+                if (imgPosition < fadeStart || imgPosition > fadeEnd) {
+                    img.classList.add("fade-out"); // Initial fade-out effect
+                } else {
+                    img.classList.remove("fade-out"); // Remove fade-out effect
+                }
+            });
+        }
+
+        // Run the fade effect continuously
+        setInterval(() => {
+            handleFadeEffect();
+        }, 100);
+
+        // Initialize the fade effect on page load
+        window.addEventListener("DOMContentLoaded", initializeFadeEffect);
+    </script>
+
+    <body class="page-home">
+</body>
+</html>
